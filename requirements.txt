@@ -26,6 +26,12 @@ pydantic==2.13.4
 presidio-analyzer==2.2.364
 presidio-anonymizer==2.2.364
 spacy==3.8.15
+# Presidio needs this spaCy model for PII detection. Pinned as a direct wheel
+# URL (not `python -m spacy download`) because platforms like Streamlit
+# Community Cloud install requirements.txt in one pass, then lock the
+# environment — a separate download step at import time fails there with a
+# permission error. Installing it here makes it part of the same pip pass.
+en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl
 
 # Observability
 opentelemetry-api==1.44.0

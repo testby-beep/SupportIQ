@@ -1,28 +1,31 @@
-# SupportIQ API — FastAPI backend container
+# SupportIQ UI — Streamlit frontend container
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# System deps needed by chromadb / sentence-transformers / spacy
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt \
-    && python -m spacy download en_core_web_lg
+RUN pip install --no-cache-dir -r requirements.txt
+# en_core_web_lg (needed by Presidio for PII detection) is installed as part
+# of requirements.txt above via a direct wheel URL — no separate
+# `spacy download` step needed.
 
 COPY src/ src/
 COPY data/ data/
+COPY app.py .
 
-# Build the vector store at image build time so the container is ready to
-# serve immediately on start (no cold-start ingestion delay in prod).
+# Vector store is built at image build time, same as the API image.
+# In docker-compose, both services instead share one pre-built volume
+# (see docker-compose.yml) so ingestion only happens once.
 RUN python -m src.ingest
 
-EXPOSE 8000
+EXPOSE 8501
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s \
-    CMD curl -f http://localhost:8000/health || exit 1
+    CMD curl -f http://localhost:8501/_stcore/health || exit 1
 
-CMD ["uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8501"]
