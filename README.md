@@ -189,19 +189,4 @@ This is structured to deploy cheaply on any container host:
    Project #11 (Production-Grade Deployment) from the original roadmap — add
    `k8s/deployment.yaml` + `k8s/service.yaml` and an Nginx ingress in front.
 
-## Resume bullet points (adapt to your voice)
 
-- Built and deployed a production-shaped RAG customer support assistant (LangChain,
-  ChromaDB, Groq/Llama 3.1) with grounded, cited answers and refusal-on-unknown
-  behavior to eliminate hallucinations.
-- Implemented a guardrails layer (Presidio) for PII detection/redaction and
-  prompt-injection filtering on both inputs and outputs, backed by unit tests
-  running in CI.
-- Instrumented the pipeline with OpenTelemetry tracing and Prometheus metrics
-  (latency, PII events, guardrail blocks) for production observability.
-- Built an automated evaluation harness using Ragas to score faithfulness, answer
-  relevancy, and retrieval quality against a golden test set, enabling regression
-  detection across changes.
-- Containerized the application (separate API/UI Docker images), orchestrated with
-  docker-compose, and set up a GitHub Actions CI/CD pipeline for linting, testing,
-  and image builds on every push.
