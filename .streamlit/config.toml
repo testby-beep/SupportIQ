@@ -1,0 +1,18 @@
+# Silences the "Examining the path of transformers.models.X raised: ModuleNotFoundError:
+# No module named 'torchvision'" spam you see on startup.
+#
+# Cause: importing HuggingFaceEmbeddings pulls in the full `transformers` package,
+# which optionally supports many vision models that need torchvision (we don't use
+# any of them — SupportIQ only does text embeddings). Streamlit's hot-reload file
+# watcher walks every loaded module's __path__ to know what to watch, hits those
+# optional vision submodules, and logs the ImportError as a warning. It's harmless —
+# nothing in this app is affected — but it's noisy, so we turn off file-watching
+# instead of scrolling past it every run.
+#
+# If you're actively editing code and want auto-reload back, change this to "auto"
+# or "poll" (poll is safer than "auto" cross-platform, especially on Windows).
+[server]
+fileWatcherType = "none"
+
+[client]
+showErrorDetails = true

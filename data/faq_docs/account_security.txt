@@ -1,0 +1,36 @@
+CloudDesk Account & Security FAQ
+
+Q: How do I reset my password?
+A: Click "Forgot Password" on the login page and enter your registered email. You'll
+receive a reset link valid for 60 minutes. If you don't receive the email within a few
+minutes, check your spam folder or contact support since your email may not be verified.
+
+Q: How do I enable two-factor authentication (2FA)?
+A: Go to Settings > Security > Two-Factor Authentication and choose either an authenticator
+app (Google Authenticator, Authy) or SMS-based codes. We strongly recommend the
+authenticator app method since SMS can be intercepted via SIM-swap attacks.
+
+Q: Can I change the email address associated with my account?
+A: Yes, under Settings > Account > Email. You'll need to verify the new email address
+before the change takes effect, and you'll receive a confirmation at your old email as
+a security measure. If someone else changed your email without permission, contact
+support immediately at security@clouddesk.example.
+
+Q: How do I delete my account permanently?
+A: Go to Settings > Account > Delete Account. This is irreversible after a 30-day grace
+period, during which you can log back in to cancel the deletion. All your projects, data,
+and billing history are permanently erased after the grace period ends.
+
+Q: Is my data encrypted?
+A: Yes. All data is encrypted in transit using TLS 1.2+ and at rest using AES-256.
+Enterprise plans additionally support customer-managed encryption keys (CMEK) for
+organizations with strict compliance requirements.
+
+Q: I think my account was compromised. What do I do?
+A: Immediately change your password, enable 2FA if you haven't already, and review
+Settings > Security > Active Sessions to revoke any sessions you don't recognize. Then
+contact security@clouddesk.example so our team can review account activity logs.
+
+Q: How many team members can I add to my workspace?
+A: Free plan: up to 3 members. Pro plan: up to 20 members. Enterprise: unlimited members
+with role-based access control (Admin, Editor, Viewer, and custom roles).

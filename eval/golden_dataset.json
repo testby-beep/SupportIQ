@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Can I get a refund if I just subscribed?",
+    "ground_truth": "Yes, monthly plans are refundable within 14 days and annual plans within 30 days, as long as you haven't used more than 20% of your usage quota."
+  },
+  {
+    "question": "How do I turn on two-factor authentication?",
+    "ground_truth": "Go to Settings > Security > Two-Factor Authentication and choose either an authenticator app or SMS-based codes. Authenticator apps are recommended over SMS."
+  },
+  {
+    "question": "Why isn't my Slack integration sending notifications?",
+    "ground_truth": "It's usually because Slack app permissions were revoked, the connected channel was deleted or archived, or notification settings were turned off. Reconnecting the integration usually fixes it."
+  },
+  {
+    "question": "Do you accept cryptocurrency payments?",
+    "ground_truth": "No, CloudDesk does not currently accept cryptocurrency. Accepted methods are major credit cards, PayPal, and bank transfer for annual Enterprise plans."
+  },
+  {
+    "question": "How many team members can I add on the Free plan?",
+    "ground_truth": "The Free plan allows up to 3 team members."
+  },
+  {
+    "question": "What happens if my card is declined on renewal?",
+    "ground_truth": "Payment is retried 3 times over 7 days. During this the account stays active in a payment-overdue state. If all retries fail, the account is downgraded to the Free plan."
+  },
+  {
+    "question": "What is CloudDesk's current stock price?",
+    "ground_truth": "This information is not available in the knowledge base — the assistant should say it doesn't have this information rather than guessing."
+  },
+  {
+    "question": "Can I export my project data?",
+    "ground_truth": "Yes, under Settings > Data > Export you can export projects as CSV, JSON, or PDF. Enterprise customers can also request a full account export via the API."
+  }
+]

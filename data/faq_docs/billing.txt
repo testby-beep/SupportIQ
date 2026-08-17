@@ -1,0 +1,39 @@
+CloudDesk Billing & Subscriptions FAQ
+
+Q: What payment methods do you accept?
+A: CloudDesk accepts all major credit cards (Visa, Mastercard, American Express), PayPal,
+and for annual Enterprise plans, we support bank transfer / wire payment. We do not
+currently accept cryptocurrency.
+
+Q: How do I upgrade or downgrade my plan?
+A: Go to Settings > Billing > Change Plan. Upgrades take effect immediately and you'll be
+charged a prorated amount for the remainder of the billing cycle. Downgrades take effect
+at the start of the next billing cycle, so you keep your current plan's features until then.
+
+Q: Do you offer refunds?
+A: We offer a full refund within 14 days of your first payment if you're on a monthly plan
+and haven't used more than 20% of your included usage quota. Annual plans are refundable
+within 30 days under the same usage condition. After these windows, we do not issue refunds
+for partial billing periods, but you can cancel anytime to stop future charges.
+
+Q: My card was declined, what should I do?
+A: First, confirm your card hasn't expired and has sufficient funds. Then check Settings >
+Billing > Payment Method to make sure the billing address matches your bank's records.
+If the issue persists, try a different card or contact your bank, since some banks block
+recurring international charges by default.
+
+Q: How does the free trial work?
+A: All new accounts get a 14-day free trial of the Pro plan with no credit card required.
+At the end of the trial, your account automatically moves to the Free plan unless you add
+a payment method. You will not be charged automatically.
+
+Q: Can I get an invoice for my company's accounting team?
+A: Yes. Every payment automatically generates a PDF invoice available under Settings >
+Billing > Invoice History. For custom invoice details (PO numbers, company address changes),
+Enterprise customers can contact billing@clouddesk.example to request a custom template.
+
+Q: What happens if my payment fails on renewal?
+A: We retry the payment 3 times over 7 days. During this period your account stays active
+in a "payment overdue" state. If all retries fail, your account is downgraded to the Free
+plan and you'll lose access to Pro features (advanced integrations, priority support,
+unlimited projects) until payment is resolved.

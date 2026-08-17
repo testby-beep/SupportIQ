@@ -1,0 +1,36 @@
+CloudDesk Technical & Integrations FAQ
+
+Q: Which third-party tools does CloudDesk integrate with?
+A: CloudDesk natively integrates with Slack, Google Drive, GitHub, Jira, and Zapier.
+Pro and Enterprise plans also get access to our public REST API and webhook system for
+custom integrations. Free plan users can use Zapier only, with a limit of 100 tasks/month.
+
+Q: Where can I find API documentation?
+A: Full API docs are available at docs.clouddesk.example/api, including authentication
+(API keys, OAuth2 for Enterprise), rate limits, and example requests in Python, JavaScript,
+and cURL. Rate limits are 60 requests/minute on Pro and 600 requests/minute on Enterprise.
+
+Q: Why is my Slack integration not sending notifications?
+A: This is usually caused by one of three things: (1) the Slack app permissions were
+revoked, (2) the connected Slack channel was deleted or archived, or (3) notification
+settings were turned off under Settings > Integrations > Slack > Notification Preferences.
+Reconnecting the integration from scratch resolves most cases.
+
+Q: Does CloudDesk have a mobile app?
+A: Yes, CloudDesk is available on iOS (14+) and Android (10+). The mobile app supports
+viewing projects, commenting, and notifications, but bulk editing and admin settings are
+currently desktop-only.
+
+Q: Can I export my data?
+A: Yes. Under Settings > Data > Export, you can export all projects as CSV, JSON, or PDF.
+Enterprise customers can also request a full account data export via the API for
+migration purposes.
+
+Q: What browsers are supported?
+A: We officially support the latest two versions of Chrome, Firefox, Safari, and Edge.
+Internet Explorer is not supported. If you experience rendering issues, clearing your
+browser cache or trying an incognito window usually resolves it.
+
+Q: Is there a status page for outages?
+A: Yes, status.clouddesk.example shows real-time uptime and incident history. You can
+subscribe to email or SMS alerts for outages affecting your region.

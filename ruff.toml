@@ -1,0 +1,10 @@
+[lint]
+# Correctness-focused rule set: pyflakes (unused imports/vars, undefined names)
+# and pycodestyle errors, plus import sorting. Deliberately not enabling
+# opinionated style rules (e.g. flake8-bugbear's "no blind except") since this
+# project intentionally catches broad Exception at API/UI boundaries to
+# convert any failure into a clean error response rather than a crash.
+select = ["E4", "E7", "E9", "F", "I"]
+
+[lint.isort]
+known-first-party = ["src", "eval"]
