@@ -19,7 +19,8 @@ eval/eval_results.csv
 # Caches
 .pytest_cache/
 .ruff_cache/
-
+.env
+.env.example
 # OS/editor cruft
 .DS_Store
 .vscode/
